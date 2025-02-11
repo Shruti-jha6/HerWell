@@ -4,12 +4,13 @@ import Home from './pages/Home/Home'
 import Login from './pages/Login/Login'
 import SignUp from './pages/SignUp/SignUp'
 import Blog from './pages/Blog/Blog'
-
+import Event from './pages/Event/event'
 
 const routes=(
   <Router>
     <Routes>
       <Route path="/dashboard" exact element ={<Home />} />
+      <Route path="/events" exact element ={<Event />} />
       <Route path="/blogs" exact element ={<Blog />} />
       <Route path="/login" exact element ={<Login />} />
       <Route path="/signup" exact element ={<SignUp />} />

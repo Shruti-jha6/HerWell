@@ -1,0 +1,26 @@
+[
+    {
+      "name": "Mindfulness Workshop",
+      "date": "March 10, 2025",
+      "time": "5 PM IST",
+      "location": "Online",
+      "image": "/images/img7.webp",
+      "description": "Learn techniques to manage stress and anxiety with expert guidance."
+    },
+    {
+      "name": "Yoga for Beginners",
+      "date": "March 15, 2025",
+      "time": "7 AM IST",
+      "location": "Central Park, Delhi",
+      "image": "/images/img8.webp",
+      "description": "Join our live session to improve flexibility and strength with trained instructors."
+    },
+    {
+      "name": "Nutrition & Wellness Seminar",
+      "date": "April 5, 2025",
+      "time": "4 PM IST",
+      "location": "Health Hub, Mumbai",
+      "image": "/images/img9.webp",
+      "description": "Get insights on a balanced diet and lifestyle changes from nutrition experts."
+    }
+]
