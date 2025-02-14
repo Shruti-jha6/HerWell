@@ -1,6 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import "./DoctorProfile.css";
+import five from './five.jpg'
+import one from './one.jpg'
+import two from './two.jpg'
+import three from './three.jpg'
+import four from './four.jpg'
+import six from './six.jpg'
+import seven from './seven.jpg'
 
 const doctorsData = {
   1: {
@@ -8,7 +15,7 @@ const doctorsData = {
     specialization: "Cardiologist",
     charges: { Consultation: 500, Checkup: 800 },
     schedule: ["Mon 10AM - 4PM", "Wed 2PM - 6PM"],
-    image: "/images/ananya-sharma.jpg",
+    image: one,
     reviews: [
       "Excellent doctor!", "Very patient and understanding", "Highly knowledgeable", "Took time to explain everything",
       "Friendly and approachable", "Great experience", "Helped me a lot", "Would definitely recommend",
@@ -23,7 +30,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: two,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -38,7 +45,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: three,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -53,7 +60,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: four,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -68,7 +75,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: five,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -83,7 +90,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: six,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -98,7 +105,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: seven,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -113,7 +120,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: one,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -128,7 +135,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: two,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -143,7 +150,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: three,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -158,7 +165,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: four,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -173,7 +180,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: five,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -188,7 +195,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: six,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -203,7 +210,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: seven,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -218,7 +225,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: one,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -233,7 +240,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: two,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -248,7 +255,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: three,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -263,7 +270,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: four,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -278,7 +285,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: five,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -293,7 +300,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: six,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -308,7 +315,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: seven,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -323,7 +330,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: one,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -338,7 +345,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: two,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -353,7 +360,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: three,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -368,7 +375,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: four,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -383,7 +390,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: five,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -398,7 +405,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image: six,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
@@ -413,7 +420,7 @@ const doctorsData = {
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: "/images/raj-verma.jpg",
+    image:seven,
     reviews: [
       "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
       "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",

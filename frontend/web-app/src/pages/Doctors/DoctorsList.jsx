@@ -2,6 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom'
 import "./DoctorsList.css";
+import five from './five.jpg'
+import one from './one.jpg'
+import two from './two.jpg'
+import three from './three.jpg'
+import four from './four.jpg'
+import six from './six.jpg'
+import seven from './seven.jpg'
 
 const doctors = [
   {
@@ -9,7 +16,7 @@ const doctors = [
     name: "Dr. Ananya Sharma",
     specialization: "Cardiologist",
     rating: 4.9,
-    image: "/images/doctor1.jpg",
+    image: one,
     location: "Mumbai",
   },
   {
@@ -17,7 +24,7 @@ const doctors = [
     name: "Dr. Raj Verma",
     specialization: "Dermatologist",
     rating: 4.7,
-    image: "/images/doctor2.jpg",
+    image: two,
     location: "Delhi",
   },
   {
@@ -25,7 +32,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: three,
     location: "Bangalore",
   },
   {
@@ -33,7 +40,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: four,
     location: "Bangalore",
   },
   {
@@ -41,7 +48,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: five,
     location: "Bangalore",
   },
   {
@@ -49,7 +56,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: six,
     location: "Bangalore",
   },
   {
@@ -57,7 +64,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: seven,
     location: "Bangalore",
   },
   {
@@ -65,7 +72,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: one,
     location: "Bangalore",
   },
   {
@@ -73,7 +80,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: two,
     location: "Bangalore",
   },
   {
@@ -81,7 +88,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: three,
     location: "Bangalore",
   },
   {
@@ -89,7 +96,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: four,
     location: "Bangalore",
   },
   {
@@ -97,7 +104,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: five,
     location: "Bangalore",
   },
   {
@@ -105,7 +112,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: six,
     location: "Bangalore",
   },
   {
@@ -113,7 +120,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: seven,
     location: "Bangalore",
   },
   {
@@ -121,7 +128,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: one,
     location: "Bangalore",
   },
   {
@@ -129,7 +136,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: two,
     location: "Bangalore",
   },
   {
@@ -137,7 +144,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: three,
     location: "Bangalore",
   },
   {
@@ -145,7 +152,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: four,
     location: "Bangalore",
   },
   {
@@ -153,7 +160,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: five,
     location: "Bangalore",
   },
   {
@@ -161,7 +168,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: six,
     location: "Bangalore",
   },
   {
@@ -169,7 +176,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: seven,
     location: "Bangalore",
   },
   {
@@ -177,7 +184,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: one,
     location: "Bangalore",
   },
   {
@@ -185,7 +192,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: two,
     location: "Bangalore",
   },
   {
@@ -193,7 +200,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: three,
     location: "Bangalore",
   },
   {
@@ -201,7 +208,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: four,
     location: "Bangalore",
   },
   {
@@ -209,7 +216,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: five,
     location: "Bangalore",
   },
   {
@@ -217,7 +224,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: six,
     location: "Bangalore",
   },
   {
@@ -225,7 +232,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: seven,
     location: "Bangalore",
   },
   {
@@ -233,7 +240,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: one,
     location: "Bangalore",
   },
   {
@@ -241,7 +248,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: two,
     location: "Bangalore",
   },
   {
@@ -249,7 +256,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: three,
     location: "Bangalore",
   },
   {
@@ -257,7 +264,7 @@ const doctors = [
     name: "Dr. Priya Kapoor",
     specialization: "Neurologist",
     rating: 4.8,
-    image: "/images/doctor3.jpg",
+    image: four,
     location: "Bangalore",
   },
 ];
@@ -308,7 +315,7 @@ const DoctorsList = () => {
             <p>{doctor.specialization}</p>
             <p className="rating">⭐ {doctor.rating}</p>
             <p className="location">{doctor.location}</p>
-            <Link to={`/doctor/${doctor.id}`} className="profile-link"></Link>
+            <Link to={`/doctor/${doctor.id}`} className="profile-link">View Profile</Link>
 
             {/* <Link to={`/doctor/${doctor.id}`} state={{ doctor }} className="profile-link">
               View Profile

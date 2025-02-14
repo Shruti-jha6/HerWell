@@ -14,7 +14,7 @@
 /* Headings and Text */
 h1 {
     font-size: 32px;
-    color: #333;
+    color: rgb(121, 16, 35);
     text-align: center;
 }
 
@@ -31,7 +31,7 @@ h1 {
     padding: 15px;
     border: 2px solid #d9534f;
     border-radius: 10px;
-    background-color: rgb(247, 248, 234);
+    background-color: #ffe9ec;
 }
 
 h2 {
@@ -64,7 +64,7 @@ select {
     border: 1px solid #ddd; /* Optional: add a border for visibility */
     padding: 10px;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: #eb919d;
   }
   
   /* Optional: Custom scrollbar for better aesthetics */
@@ -85,7 +85,7 @@ select {
 /* Booking Button */
 .book-button {
     display: block;
-    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    background: #ff6b81;
     color: white;
     padding: 12px;
     text-align: center;

@@ -14,7 +14,7 @@
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
-    color: grey;
+    color: black;
   }
   
   .search-bar {
@@ -22,24 +22,24 @@
     
     border-radius: 5px;
     width: 250px;
-    color: white;
+    color: black;
     border: 1px solid rgb(252, 104, 104);
-    background-color: #f5f5dc;
+    background-color: #ffe9ec;
     box-shadow: 0px 4px 6px rgba(216, 139, 139, 0.808);
     
   }
   
   .dropdown {
     padding: 0px;
-    border: 1px solid #ccc;
+    border: 1px solid #c218ab;
     border-radius: 5px;
     width: 65%;
     margin-bottom: 1rem;
     font-size: 0.8rem;
     text-align: center;
-    color: grey;
+    color: black;
     border: 1px solid rgb(252, 104, 104);
-    background-color: #f5f5dc;
+    background-color:#ffe9ec;
     box-shadow: 0px 4px 6px rgba(216, 139, 139, 0.808);
   }
   
@@ -52,7 +52,7 @@
   }
   
   .doctor-card {
-    background: #f5f5dc;
+    background: #ffe9ec;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -60,8 +60,8 @@
   }
   
   .doctor-image {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
   }
   
@@ -75,9 +75,10 @@
     margin-top: 10px;
     padding: 8px 15px;
     /* background-color: #007bff; */
-    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    width: 9rem;
+    background: #ff6b81;
     
-    color: white;
+    color: black;
     text-decoration: none;
     border-radius: 5px;
   }
