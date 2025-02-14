@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom'
 import "./DoctorsList.css";
@@ -9,6 +9,9 @@ import three from './three.jpg'
 import four from './four.jpg'
 import six from './six.jpg'
 import seven from './seven.jpg'
+import Navbar from '../../components/Navbar/Navbar';
+import axiosInstance from "../../utils/axiosInstance";
+import React, { useState, useEffect } from 'react';
 
 const doctors = [
   {
@@ -274,7 +277,7 @@ const doctors = [
 const DoctorsList = () => {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("");
-  const navigate = useNavigate();
+  
 
   const filteredDoctors = doctors.filter(
     (doctor) =>
@@ -282,7 +285,43 @@ const DoctorsList = () => {
       (category ? doctor.specialization === category : true)
   );
 
+  const [userInfo, setUserInfo] = useState(null);
+ 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
+  const [activeCommunity, setActiveCommunity] = useState(null); // Track which community is active
+  const getUserInfo = async () => {
+    try {
+      const response = await axiosInstance.get("/get-user");
+      if (response.data && response.data.user) {
+        setUserInfo(response.data.user);
+      }
+    } catch (error) {
+      if (error.response?.status === 401) {
+        localStorage.clear();
+        navigate("/login");
+      }
+    }
+  };
+
+  useEffect(() => {
+    getUserInfo();
+
+  
+  }, []);
+
+  const openModal = (event) => {
+    setSelectedEvent(event);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedEvent(null);
+  };
+
   return (
+    <><Navbar userInfo={userInfo} />
     <div className="container">
       {/* Search & Filters */}
       <div className="search-filters">
@@ -326,7 +365,7 @@ const DoctorsList = () => {
           </div>
         ))}
       </div>
-    </div>
+    </div></>
   );
 };
 
