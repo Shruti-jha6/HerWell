@@ -52,7 +52,7 @@ const Navbar = ({ userInfo }) => {
       
       {/* Navigation Links */}
       <div className="flex gap-6">
-      <button onClick={() => navigate('/dashboard')} className="flex items-center gap-2 text-gray-700 hover:text-black">
+      <button onClick={() => navigate('/')} className="flex items-center gap-2 text-gray-700 hover:text-black">
           <FaHome /> Home
         </button>
         <button onClick={() => navigate('/events')} className="flex items-center gap-2 text-gray-700 hover:text-black">
