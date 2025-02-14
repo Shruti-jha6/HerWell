@@ -41,7 +41,7 @@ const doctorsData = {
     ],
   },
   3: {
-    name: "Dr. Raj Verma",
+    name: "Dr. Priya Kapoor",
     specialization: "Dermatologist",
     charges: { Consultation: 400, "Skin Treatment": 1000 },
     schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
