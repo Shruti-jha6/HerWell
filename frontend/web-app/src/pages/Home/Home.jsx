@@ -1,6 +1,4 @@
 
-
-
 import './Home.css';
 import { useNavigate } from 'react-router-dom';
 import Chats from './Chats'; // Import the chat component

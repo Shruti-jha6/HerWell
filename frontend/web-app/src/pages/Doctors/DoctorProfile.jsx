@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import "./DoctorProfile.css";
-import five from './five.jpg'
-import one from './one.jpg'
-import two from './two.jpg'
-import three from './three.jpg'
-import four from './four.jpg'
-import six from './six.jpg'
-import seven from './seven.jpg'
+// import five from './five.jpg'
+// import one from './one.jpg'
+// import two from './two.jpg'
+// import three from './three.jpg'
+// import four from './four.jpg'
+// import six from './six.jpg'
+// import seven from './seven.jpg'
 
 const doctorsData = {
   1: {
@@ -100,337 +100,337 @@ const doctorsData = {
       "Solved my acne problem!"
     ],
   },
-  7: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: seven,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  8: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: one,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  9: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: two,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  10: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: three,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  11: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: four,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  12: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: five,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  13: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: six,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  14: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: seven,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  15: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: one,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  16: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: two,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  17: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: three,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  2: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: four,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  2: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: five,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  2: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: six,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  2: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: seven,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  2: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: one,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  2: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: two,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  2: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: three,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  2: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: four,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  2: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: five,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  2: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image: six,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-  2: {
-    name: "Dr. Raj Verma",
-    specialization: "Dermatologist",
-    charges: { Consultation: 400, "Skin Treatment": 1000 },
-    schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
-    image:seven,
-    reviews: [
-      "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
-      "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
-      "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
-      "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
-      "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
-      "Solved my acne problem!"
-    ],
-  },
-};
+  // 7: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: seven,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 8: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: one,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 9: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: two,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 10: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: three,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 11: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: four,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 12: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: five,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 13: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: six,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 14: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: seven,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 15: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: one,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 16: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: two,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 17: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: three,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 2: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: four,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 2: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: five,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 2: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: six,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 2: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: seven,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 2: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: one,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 2: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: two,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 2: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: three,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 2: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: four,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 2: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: five,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 2: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image: six,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  // },
+  // 2: {
+  //   name: "Dr. Raj Verma",
+  //   specialization: "Dermatologist",
+  //   charges: { Consultation: 400, "Skin Treatment": 1000 },
+  //   schedule: ["Tue 9AM - 3PM", "Fri 12PM - 5PM"],
+  //   image:seven,
+  //   reviews: [
+  //     "Helped me with my skin issue", "Highly recommended", "Best dermatologist I've visited", "Explained my condition well",
+  //     "Gave me effective treatment", "Very polite and friendly", "Skin issues solved quickly", "Clinic is hygienic",
+  //     "Understood my concerns well", "Doesn't rush appointments", "Great skincare advice", "Affordable treatment",
+  //     "Professional and courteous", "Took time to understand my case", "Very knowledgeable in his field",
+  //     "Best treatment I've had", "Would definitely visit again", "Good experience overall", "Effective solutions provided",
+  //     "Solved my acne problem!"
+  //   ],
+  };
+
 
 
 const DoctorProfile = () => {

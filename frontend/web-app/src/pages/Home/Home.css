@@ -25,7 +25,7 @@
   
   .community-card {
     /* background-color: #d1c4e9; Card background color */
-    background-color: #f67b70;
+    background-color: #ffe9ec;
     border: 1px solid #ccc; /* Card border */
     border-radius: 8px; /* Rounded corners */
     padding: 15px;
@@ -37,8 +37,8 @@
   }
   
   .join-button {
-    background-color: white; /* Button background color */
-    color: black; /* Button text color */
+    background-color :  #ff6b81; /* Button background color */
+    color: white; /* Button text color */
     border: none; /* Remove border */
     padding: 10px 15px; /* Padding around button */
     border-radius: 5px; /* Rounded corners */
@@ -47,7 +47,7 @@
   }
   
   .join-button:hover {
-    background-color: #6d3b69; /* Darker button on hover */
+    background-color: #f09890; /* Darker button on hover */
   }
   .benefits-section {
     display: flex;
@@ -58,7 +58,7 @@
   }
   
   .benefit {
-    background-color: #f67b70; /* Benefit box background color */
+    background-color: #ffe9ec; /* Benefit box background color */
     border-radius: 8px; /* Rounded corners */
     padding: 15px;
     margin: 10px; /* Margin between benefit boxes */
