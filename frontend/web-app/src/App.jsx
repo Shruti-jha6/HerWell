@@ -5,6 +5,8 @@ import Login from './pages/Login/Login'
 import SignUp from './pages/SignUp/SignUp'
 import Blog from './pages/Blog/Blog'
 import Event from './pages/Event/event'
+import DoctorsList from './pages/Doctors/DoctorsList'
+import DoctorProfile from './pages/Doctors/DoctorProfile'
 
 const routes=(
   <Router>
@@ -14,6 +16,8 @@ const routes=(
       <Route path="/blogs" exact element ={<Blog />} />
       <Route path="/login" exact element ={<Login />} />
       <Route path="/signup" exact element ={<SignUp />} />
+      <Route path="/docs" exact element ={<DoctorsList />} />
+      <Route path="/doctor/:id" exact element={<DoctorProfile />} />
     </Routes>
   </Router>
 );
