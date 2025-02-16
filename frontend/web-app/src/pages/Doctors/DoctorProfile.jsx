@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import "./DoctorProfile.css";
-// import five from './five.jpg'
-// import one from './one.jpg'
-// import two from './two.jpg'
-// import three from './three.jpg'
-// import four from './four.jpg'
-// import six from './six.jpg'
-// import seven from './seven.jpg'
+import five from './five.jpg'
+import one from './one.jpg'
+import two from './two.jpg'
+import three from './three.jpg'
+import four from './four.jpg'
+import six from './six.jpg'
+import seven from './seven.jpg'
 
 const doctorsData = {
   1: {
