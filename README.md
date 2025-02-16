@@ -21,7 +21,7 @@
 **Our Mission:** To create an inclusive community that enhances women's overall well-being by promoting open dialogue and comprehensive care. <br>
 **Team Name:** Chhote mote coders<br>
 **Hackathon:** [MSC Hackathon]([https://leanin-hacks-5.devfolio.co/](https://hackitup-msc.devfolio.co/)) <br>
-**Team Members:** [Sania Saini](https://github.com/sania111), [Shruti Jha](https://github.com/Shruti-jha6)), [Anshika Goyal](https://github.com/Anshikaa10), [Chhavi](https://github.com/chhavi007)<br>
+**Team Members:** [Sania Saini](https://github.com/sania111), [Shruti Jha](https://github.com/Shruti-jha6), [Anshika Goyal](https://github.com/Anshikaa10), [Chhavi](https://github.com/chhavi007)<br>
 ## **--------------------THANK YOU ☺️--------------------**<br>
 
 **Glimpse of Adira:**
