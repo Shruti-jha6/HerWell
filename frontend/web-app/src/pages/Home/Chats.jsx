@@ -34,11 +34,11 @@ const auth = getAuth(app);
 const firestore = getFirestore(app);
 
 const fakeUsers = [
-  { id: 1, name: "Alice", photoURL: "https://api.dicebear.com/6.x/avataaars/svg?seed=Alice" },
-  { id: 2, name: "Bob", photoURL: "https://api.dicebear.com/6.x/avataaars/svg?seed=Bob" },
-  { id: 3, name: "Charlie", photoURL: "https://api.dicebear.com/6.x/avataaars/svg?seed=Charlie" },
-  { id: 4, name: "David", photoURL: "https://api.dicebear.com/6.x/avataaars/svg?seed=David" },
-  { id: 5, name: "Eve", photoURL: "https://api.dicebear.com/6.x/avataaars/svg?seed=Eve" }
+  { id: 1, name: "Ansh", photoURL: "https://api.dicebear.com/6.x/avataaars/svg?seed=Alice" },
+  { id: 2, name: "Chandini", photoURL: "https://api.dicebear.com/6.x/avataaars/svg?seed=Bob" },
+  { id: 3, name: "Rohan", photoURL: "https://api.dicebear.com/6.x/avataaars/svg?seed=Charlie" },
+  { id: 4, name: "Disha", photoURL: "https://api.dicebear.com/6.x/avataaars/svg?seed=David" },
+  { id: 5, name: "Chhavi", photoURL: "https://api.dicebear.com/6.x/avataaars/svg?seed=Eve" }
 ];
 
 function Chats() {
