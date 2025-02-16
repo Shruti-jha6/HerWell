@@ -5,6 +5,7 @@ import Modal from "react-modal";
 import { useNavigate } from 'react-router-dom'
 import axiosInstance from "../../utils/axiosInstance";
 import "../../../src/blog.css"
+import Footer from '../../components/Footer/Footer';
 const Blog = () => {
 
   const [openAddEditModal, setOpenAddEditModal] = useState({
@@ -77,7 +78,7 @@ const Blog = () => {
           </button>
         </div>
     </div>
-      
+     <Footer /> 
     </>
   )
 }

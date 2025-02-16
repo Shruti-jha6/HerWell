@@ -14,11 +14,12 @@ const Blog = React.lazy(() => import('./pages/Blog/Blog'));
 const Event = React.lazy(() => import('./pages/Event/Event'));
 const DoctorsList = React.lazy(() => import('./pages/Doctors/DoctorsList'));
 const DoctorProfile = React.lazy(() => import('./pages/Doctors/DoctorProfile'));
-
+const Chats = React.lazy(() => import('./pages/Home/Chats'));
 const routes=(
   <Router>
     <Routes>
       <Route path="/" exact element ={<Home />} />
+      <Route path="/chat" element={<Chats />} />
       <Route path="/dashboard" exact element ={<Home />} />
       <Route path="/events" exact element ={<Event />} />
       <Route path="/blogs" exact element ={<Blog />} />

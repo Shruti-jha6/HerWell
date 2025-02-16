@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance from "../../utils/axiosInstance";
 import "../../../src/event.css";
+import Footer from '../../components/Footer/Footer';
 
 const Event = () => {
   const [userInfo, setUserInfo] = useState(null);
@@ -114,6 +115,7 @@ const Event = () => {
           </div>
         </div>
       )}
+      <Footer />
     </>
   );
 };
