@@ -1,8 +1,30 @@
 # Adira: For Women By Women
-Adira is a transformative platform dedicated to normalizing women's health discussions. It provides a secure digital space for community support, expert consultations, and reliable health resources. Adira fosters an empowering environment where women can openly discuss health topics, connect with healthcare professionals, and access curated information. <br>
-Adira's mission is to create an inclusive community that enhances women's overall well-being by promoting open dialogue and comprehensive care.
+## What was the Problem?
+### Women Health or a stigma:
+- Women’s health conversations in India are still surrounded by stigma.
+- Lack of awareness and access to trusted healthcare often leads to misinformation and silence.
+- Many women struggle to find reliable medical support and a safe space to discuss their concerns.
 
-Here are some images of the Website-
+## What is the Solution?
+### Adira: A platform for women by women
+- A comprehensive women’s healthcare platform that normalizes health discussions.
+- A safe digital space for community support, expert consultations and trusted resources.
+- An empowering community where women access knowledge, care and support.
+
+## What is the Envision?
+### Artificial Intelligence: Look forward for AI Integration
+- Personalized health recommendations using AI and machine learning.
+- Regional Support for multiple Indian languages to reach rural and underserved areas.
+- Direct access to medicines, diagnostic tests, and doorstep delivery.
+- Dedicated support for pregnancy, postpartum wellness, and childcare.
+
+**Our Mission:** To create an inclusive community that enhances women's overall well-being by promoting open dialogue and comprehensive care. <br>
+**Team Name:** Chhote mote coders<br>
+**Hackathon:** [MSC Hackathon]([https://leanin-hacks-5.devfolio.co/](https://hackitup-msc.devfolio.co/)) <br>
+**Team Members:** [Sania Saini](https://github.com/sania111), [Shruti Jha](https://github.com/Shruti-jha6)), [Anshika Goyal](https://github.com/Anshikaa10), [Chhavi](https://github.com/chhavi007)<br>
+## **--------------------THANK YOU ☺️--------------------**<br>
+
+**Glimpse of Adira:**
 ![Screenshot (797)](https://github.com/user-attachments/assets/d669b404-7bd2-45ba-9e93-22474f705839)
 ![Screenshot (796)](https://github.com/user-attachments/assets/cedb9a5e-434a-415b-bcdb-62948adde8ce)
 ![Screenshot (795)](https://github.com/user-attachments/assets/39735aeb-e383-43ae-873e-415f6f742f0b)
