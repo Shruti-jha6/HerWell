@@ -25,13 +25,10 @@
 ## **--------------------THANK YOU ☺️--------------------**<br>
 
 **Glimpse of Adira:**
-![Screenshot (797)](https://github.com/user-attachments/assets/d669b404-7bd2-45ba-9e93-22474f705839)
-![Screenshot (796)](https://github.com/user-attachments/assets/cedb9a5e-434a-415b-bcdb-62948adde8ce)
-![Screenshot (795)](https://github.com/user-attachments/assets/39735aeb-e383-43ae-873e-415f6f742f0b)
-![Screenshot (800)](https://github.com/user-attachments/assets/43029411-7f45-4992-a1c4-b032c37c4504)
-![Screenshot (794)](https://github.com/user-attachments/assets/96aed49d-b91a-4c0f-81f8-990caf9b7353)
-![Screenshot (793)](https://github.com/user-attachments/assets/0a0b553d-8daf-4284-bce6-97794a5e4b8e)
-![Screenshot (792)](https://github.com/user-attachments/assets/423d7883-c129-431c-9564-6c7671e496fc)
-![Screenshot (798)](https://github.com/user-attachments/assets/3859319d-4c29-4dc7-a55c-b9ed6cd57c68)
-![Screenshot (791)](https://github.com/user-attachments/assets/f4c66611-9b2d-43d9-8049-364da41bcca6)
+![Image](https://github.com/user-attachments/assets/d9ccf50a-14ab-4e68-90dc-d01875b22b4a)
+![Image](https://github.com/user-attachments/assets/fd2e5fb0-1605-4e22-b316-993c758031d5)
+![Image](https://github.com/user-attachments/assets/d137ed3e-01a8-4897-9f06-6cd26951aaec)
+![Image](https://github.com/user-attachments/assets/5e8f4536-3cb2-4e7c-8e5e-e16588222a1f)
+![Image](https://github.com/user-attachments/assets/c94070d4-7e38-4215-b139-6aadc784d884)
+
 
