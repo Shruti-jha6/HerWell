@@ -1,17 +1,15 @@
-
 import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom'
-import "./DoctorsList.css";
-import five from './five.jpg'
-import one from './one.jpg'
-import two from './two.jpg'
-import three from './three.jpg'
-import four from './four.jpg'
-import six from './six.jpg'
-import seven from './seven.jpg'
+import { useNavigate } from 'react-router-dom';
+import one from './one.jpg';
+import two from './two.jpg';
+import three from './three.jpg';
+import four from './four.jpg';
+import five from './five.jpg';
+import six from './six.jpg';
 import Navbar from '../../components/Navbar/Navbar';
+import SideMenu from '../../components/SideMenu/SideMenu';
 import axiosInstance from "../../utils/axiosInstance";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
 const doctors = [
   {
@@ -21,6 +19,8 @@ const doctors = [
     rating: 4.9,
     image: one,
     location: "Mumbai",
+    experience: "15 years",
+    contact: "dr.ananya@example.com"
   },
   {
     id: 2,
@@ -29,6 +29,8 @@ const doctors = [
     rating: 4.7,
     image: two,
     location: "Delhi",
+    experience: "12 years",
+    contact: "dr.raj@example.com"
   },
   {
     id: 3,
@@ -37,259 +39,47 @@ const doctors = [
     rating: 4.8,
     image: three,
     location: "Bangalore",
+    experience: "10 years",
+    contact: "dr.priya@example.com"
   },
   {
     id: 4,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
+    name: "Dr. Neha Gupta",
+    specialization: "Orthopedic Surgeon",
+    rating: 4.6,
     image: four,
-    location: "Bangalore",
+    location: "Hyderabad",
+    experience: "8 years",
+    contact: "dr.neha@example.com"
   },
   {
     id: 5,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
+    name: "Dr. Anil Mehta",
+    specialization: "Pediatrician",
     rating: 4.8,
     image: five,
-    location: "Bangalore",
+    location: "Chennai",
+    experience: "20 years",
+    contact: "dr.anil@example.com"
   },
   {
     id: 6,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
+    name: "Dr. Sunita Rao",
+    specialization: "Gynecologist",
+    rating: 4.7,
     image: six,
-    location: "Bangalore",
-  },
-  {
-    id: 7,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: seven,
-    location: "Bangalore",
-  },
-  {
-    id: 8,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: one,
-    location: "Bangalore",
-  },
-  {
-    id: 9,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: two,
-    location: "Bangalore",
-  },
-  {
-    id: 10,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: three,
-    location: "Bangalore",
-  },
-  {
-    id: 11,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: four,
-    location: "Bangalore",
-  },
-  {
-    id: 12,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: five,
-    location: "Bangalore",
-  },
-  {
-    id: 13,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: six,
-    location: "Bangalore",
-  },
-  {
-    id: 14,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: seven,
-    location: "Bangalore",
-  },
-  {
-    id: 15,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: one,
-    location: "Bangalore",
-  },
-  {
-    id: 16,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: two,
-    location: "Bangalore",
-  },
-  {
-    id: 17,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: three,
-    location: "Bangalore",
-  },
-  {
-    id: 18,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: four,
-    location: "Bangalore",
-  },
-  {
-    id: 19,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: five,
-    location: "Bangalore",
-  },
-  {
-    id: 20,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: six,
-    location: "Bangalore",
-  },
-  {
-    id: 21,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: seven,
-    location: "Bangalore",
-  },
-  {
-    id: 22,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: one,
-    location: "Bangalore",
-  },
-  {
-    id: 23,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: two,
-    location: "Bangalore",
-  },
-  {
-    id: 24,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: three,
-    location: "Bangalore",
-  },
-  {
-    id: 25,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: four,
-    location: "Bangalore",
-  },
-  {
-    id: 26,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: five,
-    location: "Bangalore",
-  },
-  {
-    id: 27,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: six,
-    location: "Bangalore",
-  },
-  {
-    id: 28,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: seven,
-    location: "Bangalore",
-  },
-  {
-    id: 29,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: one,
-    location: "Bangalore",
-  },
-  {
-    id: 30,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: two,
-    location: "Bangalore",
-  },
-  {
-    id: 31,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: three,
-    location: "Bangalore",
-  },
-  {
-    id: 32,
-    name: "Dr. Priya Kapoor",
-    specialization: "Neurologist",
-    rating: 4.8,
-    image: four,
-    location: "Bangalore",
-  },
+    location: "Kolkata",
+    experience: "18 years",
+    contact: "dr.sunita@example.com"
+  }
 ];
-
-
 
 const DoctorsList = () => {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("");
-  
-
-  const filteredDoctors = doctors.filter(
-    (doctor) =>
-      doctor.name.toLowerCase().includes(search.toLowerCase()) &&
-      (category ? doctor.specialization === category : true)
-  );
-
   const [userInfo, setUserInfo] = useState(null);
- 
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
-  const [activeCommunity, setActiveCommunity] = useState(null); // Track which community is active
+
   const getUserInfo = async () => {
     try {
       const response = await axiosInstance.get("/get-user");
@@ -306,66 +96,40 @@ const DoctorsList = () => {
 
   useEffect(() => {
     getUserInfo();
-
-  
   }, []);
 
-  const openModal = (event) => {
-    setSelectedEvent(event);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedEvent(null);
-  };
+  const filteredDoctors = doctors.filter(
+    (doctor) =>
+      doctor.name.toLowerCase().includes(search.toLowerCase()) &&
+      (category ? doctor.specialization === category : true)
+  );
 
   return (
-    <><Navbar userInfo={userInfo} />
-    <div className="container">
-      {/* Search & Filters */}
-      <div className="search-filters">
-        <input type="text" placeholder="Enter your location" className="search-bar" />
-        <input
-          type="text"
-          placeholder="Search for a doctor..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="search-bar"
-        />
+    <>
+      <Navbar userInfo={userInfo} />
+      <SideMenu search={search} setSearch={setSearch} category={category} setCategory={setCategory} />
+      <div className="w-full min-h-full flex flex-col items-center p-5 bg-gray-100 ml-64">
+        {/* Doctor Cards */}
+        <div className="flex flex-wrap gap-5 w-full max-w-screen-xl">
+          {filteredDoctors.map((doctor) => (
+            <div key={doctor.id} className="bg-white rounded-xl p-4 shadow-md text-center transition-all hover:shadow-lg">
+              <Link to={`/doctor/${doctor.id}`} state={{ doctor }}>
+                <img src={doctor.image} alt={doctor.name} className="w-36 h-36 rounded-full mx-auto" />
+              </Link>
+              <h3 className="mt-2 text-lg font-semibold">{doctor.name}</h3>
+              <p className="text-gray-600">{doctor.specialization}</p>
+              <p className="font-bold text-yellow-500 my-1">⭐ {doctor.rating}</p>
+              <p className="text-gray-600">{doctor.location}</p>
+              <p className="text-gray-600">Experience: {doctor.experience}</p>
+              <p className="text-gray-600">Contact: {doctor.contact}</p>
+              <Link to={`/doctor/${doctor.id}`} className="inline-block mt-2 px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-all">
+                View Profile
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
-
-      {/* Category Dropdown */}
-      <select onChange={(e) => setCategory(e.target.value)} className="dropdown">
-        <option value="">All Specialties</option>
-        <option value="Cardiologist">Cardiologist</option>
-        <option value="Dermatologist">Dermatologist</option>
-        <option value="Neurologist">Neurologist</option>
-      </select>
-
-      {/* Doctor Cards */}
-      <div className="doctor-grid">
-        {filteredDoctors.map((doctor) => (
-          <div key={doctor.id} className="doctor-card">
-            <Link to={`/doctor/${doctor.id}`} state={{ doctor }}>
-              <img src={doctor.image} alt={doctor.name} className="doctor-image" />
-            </Link>
-            <h3>{doctor.name}</h3>
-            <p>{doctor.specialization}</p>
-            <p className="rating">⭐ {doctor.rating}</p>
-            <p className="location">{doctor.location}</p>
-            <Link to={`/doctor/${doctor.id}`} className="profile-link">View Profile</Link>
-
-            {/* <Link to={`/doctor/${doctor.id}`} state={{ doctor }} className="profile-link">
-              View Profile
-            </Link> */}
-            {/* <button onClick={() => navigate(`/doctor/${doctor.id}`, { state: { doctor } })}>
-              View Profile
-            </button> */}
-          </div>
-        ))}
-      </div>
-    </div></>
+    </>
   );
 };
 
